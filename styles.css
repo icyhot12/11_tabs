@@ -13,73 +13,89 @@ body {
 }
 
 button {
-    border: none;
-    padding: 15px 0;
-    width: calc(1/3*100%);
-    font-size: 1.2rem;
-}
-
-button:hover {
-    background-color: white;
+  border: none;
+  padding: 15px 0;
+  width: calc(1 / 3 * 100%);
+  font-size: 1.2rem;
 }
 
 .hero-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 100px;
 }
 
 .title-container {
-    text-align: center;
+  text-align: center;
 }
 
 .main-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .content-container {
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    justify-content: center;
-    padding-top: 50px;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 30px;
 }
 
 .description-container {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .text-container {
-    width: 550px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 5px 10px; 
+  display: none;
+  width: 550px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.text-container.active {
+  display: block;
 }
 
 .description-title {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .btns-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-btn.active {
+  background-color: white;
 }
 
 .description-long {
-    text-align: justify;
+  text-align: justify;
 }
 
 .image-container img {
-    width: 550px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 550px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1450px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container {
+    padding: 10px 15px 30px 15px;
+  }
 }
